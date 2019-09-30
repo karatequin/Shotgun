@@ -1,0 +1,90 @@
+<p>register works!</p>
+
+<form [formGroup]="registerForm" class="example-form" (ngSubmit)="onRegisterClick()">
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="first Name" formControlName="firstName">
+        
+      <mat-error *ngIf="registerForm.controls.firstName.hasError('required')">
+        Please enter your firstname
+      </mat-error>
+    
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder= "last name" formControlName="lastName">
+        
+        <mat-error *ngIf="registerForm.controls.lastName.hasError('required')">
+                Please enter lastName
+              </mat-error>
+
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder= "E-Mail" formControlName="email">
+    
+        <mat-error *ngIf="registerForm.controls.email.hasError('required')">
+                Please enter your email address
+              </mat-error>
+    
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder= "password" type = "password" formControlName="password">
+    
+        <mat-error *ngIf="registerForm.controls.password.hasError('required')">
+                Please enter your password
+              </mat-error>
+    
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder= "city" formControlName="city">
+    
+        <mat-error *ngIf="registerForm.controls.city.hasError('required')">
+                Please enter your city
+              </mat-error>
+    
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder= "location of your education" formControlName="locationOfEducation">
+    
+        <mat-error *ngIf="registerForm.controls.locationOfEducation.hasError('required')">
+                Please enter the location of your education
+              </mat-error>
+
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="birthDate">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        
+        <mat-error *ngIf="registerForm.controls.birthDate.hasError('required')">
+                Please enter your birthdate
+              </mat-error>
+    
+    </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder= "phone number" type="number" formControlName="phoneNumber">
+   
+        <mat-error *ngIf="registerForm.controls.phoneNumber.hasError('required')">
+                Please enter your phone number
+              </mat-error>
+
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder= "" type="number">
+    </mat-form-field>
+    
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder= "driver License number" type="number">
+    </mat-form-field>
+    
+    
+    <button mat-raised-button color="primary">Register</button>
+
+  </form>

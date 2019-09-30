@@ -1,0 +1,23 @@
+<p>login works!</p>
+
+<form [formGroup]="loginForm" class="example-form" (ngSubmit)="onLoginClick()">
+    
+  <mat-form-field class="example-full-width">
+      <input matInput placeholder="Login" formControlName="username">
+      
+      <mat-error *ngIf="loginForm.controls.username.hasError('required')">
+        Please enter a valid username
+      </mat-error>
+
+      <mat-error *ngIf="loginForm.controls.username.hasError('minlength')">
+        username must be atleast 3
+      </mat-error>
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder= "Password" type = "password" formControlName="password">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary">login</button>
+
+  </form>
