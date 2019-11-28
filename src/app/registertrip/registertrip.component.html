@@ -1,0 +1,45 @@
+<p>registertrip works!</p>
+
+<form [formGroup]="registerTripForm" class="example-form" (ngSubmit)="onTripSubmit()">
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="origin" id = "registertrip-origin"formControlName="origin">
+        
+      <mat-error>
+        Please enter your origin
+      </mat-error>
+    
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder= "destination" id = "registertrip-destination" formControlName="destination">
+        
+        <mat-error>
+                Please enter a destination
+              </mat-error>
+
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+            <input matInput placeholder= "available seats" type="number" id = "registertrip-available-seats" formControlName="availableSeats">
+       
+            <mat-error>
+                    Please enter the amount of availableseats you have 
+                  </mat-error>
+    
+        </mat-form-field>
+
+    <mat-form-field>
+       
+            <input matInput placeholder= "" type="datetime-local" id="registertrip-departure-time" formControlName="departureTime">
+
+        <mat-error>
+                Please enter the date when you are going to leave
+              </mat-error>
+    
+    </mat-form-field>
+    
+    
+    <button mat-raised-button color="primary" id="registerTrip">Register Trip</button>
+
+  </form>

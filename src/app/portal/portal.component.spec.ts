@@ -1,20 +1,20 @@
 // import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-// import { RegisterComponent } from './register.component';
+// import { PortalComponent } from './portal.component';
 
-// describe('RegisterComponent', () => {
-//   let component: RegisterComponent;
-//   let fixture: ComponentFixture<RegisterComponent>;
+// describe('PortalComponent', () => {
+//   let component: PortalComponent;
+//   let fixture: ComponentFixture<PortalComponent>;
 
 //   beforeEach(async(() => {
 //     TestBed.configureTestingModule({
-//       declarations: [ RegisterComponent ]
+//       declarations: [ PortalComponent ]
 //     })
 //     .compileComponents();
 //   }));
 
 //   beforeEach(() => {
-//     fixture = TestBed.createComponent(RegisterComponent);
+//     fixture = TestBed.createComponent(PortalComponent);
 //     component = fixture.componentInstance;
 //     fixture.detectChanges();
 //   });
