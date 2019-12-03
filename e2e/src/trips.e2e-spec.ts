@@ -1,6 +1,5 @@
 import { by, element, browser } from "protractor";
 import { protractor } from 'protractor/built/ptor';
-
 describe("Trip tests",()=> {
 
     it("test login and registertrip",() =>{
