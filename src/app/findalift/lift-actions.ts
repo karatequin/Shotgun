@@ -31,12 +31,25 @@ constructor (private ngRedux: NgRedux<AppState>, private apiService: ApiService,
     });
   }
 
-callDeleteAction(id: string): void {
+  
+
+  DeleteTrip(id: string) : void{ 
+      
     this.ngRedux.dispatch({
-      type: LiftActions.DeleteAction,
-      payload: id
+
+      type: LiftActions.IS_LOADING,
+      payload: true
+    });
+    
+      this.apiService.DeleteTrip(id).subscribe(() => {
+      this.ngRedux.dispatch({
+        type: LiftActions.DeleteAction,
+        payload: id
+      });
     });
   }
+
+ 
 
   callCreateAction(trip: Trip): void {
 

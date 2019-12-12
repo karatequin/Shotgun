@@ -24,10 +24,11 @@ this.ngRedux.select(x => x.trips).subscribe((state) => {
   this.isLift = state.isLift;
   this.lifts = state.lifts;
 });
+  this.liftActions.getTrips();
 }
   onTripDelete(id: string):void  {
   
-    this.liftActions.callDeleteAction(id);
+    this.liftActions.DeleteTrip(id);
   }
 
   onTestClick(): void {

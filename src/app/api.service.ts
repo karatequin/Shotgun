@@ -19,4 +19,9 @@ export class ApiService {
     trip.localFilter = 'Arnold';
     return this.http.post(this.baseUrl, trip);
   }
+
+  DeleteTrip(id: string) {
+    return this.http.delete(this.baseUrl + "/" +id, {responseType: 'text'})
+  }
+
 }

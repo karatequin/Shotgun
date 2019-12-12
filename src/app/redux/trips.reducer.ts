@@ -23,6 +23,8 @@ export function tripsReducer(state: TripState = INITIAL_STATE, action: any) {
     
   case LiftActions.DeleteAction:
       const deleteLifts: Trip[] = state.lifts.filter(x => x._id !== action.payload);
+      console.log( "state lifts", state.lifts);
+      console.log("trip Id", action.payload);
       return tassign(state,{lifts: deleteLifts});
       
 
