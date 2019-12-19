@@ -1,0 +1,19 @@
+   <mat-card class="example-card trip-Count-css">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+
+        <mat-card-title>{{lift.origin | uppercase }} - {{lift.destination}} </mat-card-title>
+        <mat-card-subtitle>{{lift.departureTime | date:"dd/MM/yyyy hh:mm"}} </mat-card-subtitle>
+    
+    </mat-card-header>
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+        <p>
+        {{lift.owner.firstName}} {{lift.owner.lasttName}} have {{lift.availableSeats}} available seats
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button class="delete-css" (click)="onTripDelete(lift._id)" >DELETE</button>
+        <button mat-button>SHARE</button>
+    </mat-card-actions>
+    </mat-card>

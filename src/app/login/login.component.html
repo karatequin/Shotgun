@@ -1,0 +1,25 @@
+<h1>Login</h1>>
+{{ 0.743 | percent }}
+{{ 132 | currency:'DKK' }}
+
+<form [formGroup]="loginForm" class="example-form" (ngSubmit)="onLoginClick()">
+    
+  <mat-form-field class="example-full-width">
+      <input matInput placeholder="Login" id = "username-input" formControlName="username">
+      
+      <mat-error *ngIf="loginForm.controls.username.hasError('required')">
+        Please enter a valid username
+      </mat-error>
+
+      <mat-error *ngIf="loginForm.controls.username.hasError('minlength')">
+        username must be atleast 3
+      </mat-error>
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder= "Password" id = "password-input" type = "password" formControlName="password">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" id = "login-botton">login</button>
+
+  </form>
